@@ -380,7 +380,7 @@ function ShibUserLoadFromSession($user, &$result)
 			if($r == $wgAdminEntitlement) $user->addGroup("sysop");
 			$user->addGroup($r);
 		}
-		if (in_array($user->mName, array("Burgosz", "Vpeter"))) $user->addGroup("sysop");
+		if (in_array($user->mName, array())) $user->addGroup("sysop");
 		wfSetupSession();
 		$user->setCookies();
 		return true;
